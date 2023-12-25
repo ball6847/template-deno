@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true
+  },
+  "lint": {
+    "include": ["./"]
+  },
+  "fmt": {
+    "files": {
+      "include": ["./"]
+    },
+    "options": {
+      "useTabs": false,
+      "indentWidth": 2,
+      "singleQuote": true,
+      "proseWrap": "preserve"
+    }
+  },
+  "imports": {},
+  "tasks": {
+    "cache": "deno cache -q --unstable src/main.ts",
+    "lint": "deno lint --unstable && deno check --unstable src/main.ts",
+    "start": "deno run --unstable src/main.ts",
+    "dev": "deno run --unstable-hmr src/main.ts"
+  }
+}
